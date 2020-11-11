@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+html {
+  font-size: 12px;
+  color: black;
+  height: 100%;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  background: red;
+  background: -webkit-gradient(linear, right top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(to bottom left, #af67e9, #6565e7);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main {
+  margin-top: 100px;
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 75px;
+  height: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1050px) {
+  .main {
+    max-width: 90vw;
+    width: 90%;
+    padding: 0;
+    height: 95vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1050px) {
+  .box {
+    width: 100%;
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.box img {
+  position: absolute;
+  margin-top: 23px;
+  margin-left: -128px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1050px) {
+  .box img {
+    content: url(../images/illustration-woman-online-mobile.svg);
+    margin: 0;
+    top: 20px;
+  }
+}
+
+.container {
+  width: inherit;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border-radius: 30px;
+  background-color: #FFF;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1050px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+.container__image {
+  width: 50%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1050px) {
+  .container__image {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.container__image figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 600px;
+}
+
+@media screen and (max-width: 1050px) {
+  .container__image figure {
+    position: absolute;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: auto;
+    top: -117px;
+  }
+}
+
+.container__image--woman {
+  position: absolute;
+  top: 72px;
+  left: -76px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1050px) {
+  .container__image--woman {
+    display: none;
+  }
+}
+
+.container__image--bg {
+  position: absolute;
+  bottom: -105px;
+  left: -566px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1050px) {
+  .container__image--bg {
+    position: absolute;
+    content: url(../images/bg-pattern-mobile.svg);
+    top: -130px;
+    bottom: auto;
+    left: auto;
+    margin-left: 29px;
+  }
+}
+
+.container__faq {
+  width: 45%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 1050px) {
+  .container__faq {
+    width: 90%;
+    margin-top: 140px;
+  }
+}
+
+.container__faq h1 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-size: 45px;
+  color: #4a4b5e;
+}
+
+@media screen and (max-width: 1050px) {
+  .container__faq h1 {
+    text-align: center;
+  }
+}
+
+.container__faq__article {
+  border-bottom: 2px solid #e7e7e9;
+  margin-bottom: 20px;
+}
+
+.container__faq__article [type="radio"] {
+  display: none;
+}
+
+.container__faq__article .showAnswer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.container__faq__article .showAnswer p {
+  font-size: 18px;
+  color: #787887;
+}
+
+.container__faq__article .showAnswer img {
+  height: 11px;
+}
+
+.container__faq__article .showAnswer:hover > p {
+  color: #f47c57;
+}
+
+.container__faq__article .showAnswer + p {
+  display: none;
+}
+
+.container__faq__article [type="radio"]:checked ~ p {
+  display: block;
+  font-size: 14px;
+  color: #787887;
+  margin-bottom: 10px;
+}
+
+.container__faq__article [type="radio"]:checked + .showAnswer p {
+  color: #4a4b5e;
+  font-weight: 700;
+}
+
+.container__faq__article [type="radio"]:checked + .showAnswer img {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.attribution {
+  margin-top: 50px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #dee0e8;
+}
+/*# sourceMappingURL=main.css.map */

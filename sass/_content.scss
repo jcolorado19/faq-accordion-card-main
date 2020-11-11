@@ -1,0 +1,211 @@
+body{
+    background: red;
+    background: -webkit-linear-gradient(top right, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background: -moz-linear-gradient(top right, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background: linear-gradient(to bottom left, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    margin-top: 100px;
+    max-width: 1100px;
+    width: 100%;
+    padding: 0 75px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    @media screen and (min-width: 320px) and (max-width:1050px){
+        max-width: 90vw;
+        width: 90%;
+        padding: 0;
+        height: 95vh;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+.box {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    z-index: 10;
+
+    @media screen and (min-width: 320px) and (max-width:1050px){
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+    
+    & img {
+        position: absolute;
+        margin-top: 23px;
+        margin-left: -128px;
+
+        @media screen and (min-width: 320px) and (max-width:1050px){
+            content: url(../images/illustration-woman-online-mobile.svg);
+            margin: 0;
+            top: 20px;
+        }
+    }
+}
+
+.container {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 30px;
+    background-color: $white;
+    overflow: hidden;
+
+    @media screen and (min-width: 320px) and (max-width:1050px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    &__image{
+        width: 50%;
+        @media screen and (min-width: 320px) and (max-width:1050px){
+            position: absolute;
+            width: 100%;
+        }
+
+        & figure{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 600px;
+            
+            @media screen and (max-width:1050px){
+                position: absolute;
+                flex-direction: row;
+                width: 100%;
+                height: auto;
+                top: -117px;
+
+            }
+        }
+
+        &--woman{
+            position: absolute;
+            top: 72px;
+            left: -76px;
+            
+            @media screen and (min-width: 320px) and (max-width:1050px){
+                display: none;
+            }
+        }
+
+        &--bg{
+            position: absolute;
+            bottom: -105px;
+            left: -566px;
+
+            @media screen and (min-width: 320px) and (max-width:1050px){
+                position: absolute;
+                content: url(../images/bg-pattern-mobile.svg);
+                top: -130px;
+                bottom: auto;
+                left: auto;
+                margin-left: 29px;
+            }
+        }
+    }
+
+    &__faq{
+        width: 45%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 1050px){
+            width: 90%;
+            margin-top: 140px;
+        }
+
+        & h1{
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-size: 45px;
+            color: $dark-grayish-blue;
+
+            @media screen and (max-width: 1050px){
+                text-align: center;
+            }
+        }
+
+        &__article{
+            border-bottom: 2px solid $line;
+            margin-bottom: 20px;
+
+            & [type="radio"]{
+                display: none;
+            }
+
+            & .showAnswer {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 15px;
+
+                & p {
+                    font-size: 18px;
+                    color: $grayish-blue;
+                }
+
+                & img{
+                    height: 11px;
+                }
+
+                &:hover > p{
+                    color: $hover;
+                }
+
+                & + p {
+                    display: none;
+                }
+            }
+
+            & [type="radio"]:checked {
+                & ~ p {
+                    display: block;
+                    font-size: 14px;
+                    color: $grayish-blue;
+                    margin-bottom: 10px;
+                }
+
+                & + .showAnswer p {
+                    color: $dark-grayish-blue;
+                    font-weight: 700;
+                }
+
+                & + .showAnswer img {
+                    transform: rotateX(180deg);
+                }
+            }
+        }
+    }
+}
+
+.attribution {
+    margin-top: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 19%, 89%);
+}
